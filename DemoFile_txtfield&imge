@@ -1,0 +1,159 @@
+import 'package:flutter/material.dart';
+
+void main() {
+
+  runApp(
+      MyApp()
+  );
+}
+
+class MyApp extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+ return MaterialApp(
+
+    home: Scaffold(
+               backgroundColor: Colors.lightGreen,
+          body: SafeArea(
+
+            child: Column(
+              //center the text field.............
+              mainAxisAlignment:  MainAxisAlignment.center,
+                 children: <Widget>[
+                  CircleAvatar(
+                   radius: 50.0,
+                    backgroundImage: AssetImage('imagess/wallPenguine3.jpg'),
+
+                 ),
+
+
+                Text(
+                  'Yoooo Hooooooo',
+                  style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+                ),
+                   Text(
+                     'Flutter Learner ',
+                        style: TextStyle(
+                       fontFamily: 'Source Sans Pro',
+                       color: Colors.teal.shade50,
+                       fontSize:  20.0,
+                       letterSpacing: 2.5,
+                       fontWeight: FontWeight.bold,
+                     ),
+                   ),
+
+
+                      SizedBox(
+                        width: 200,
+
+                        height: 20.0,
+                        child: Divider(
+                        color: Colors.white,
+                      ),
+                      ),
+                      Card(
+                        
+                        //padding: EdgeInsets.all(10.0),
+                      color: Colors.white,
+                        margin: EdgeInsets.symmetric(vertical: 8.0,horizontal: 25.0),
+                        child:   Row(
+
+                           children: <Widget>[
+                             Icon(
+                           Icons.phone,
+                           size: 30.0,
+                           color: Colors.black26,
+                       ),
+
+                          SizedBox(
+                             width: 10.0, //distance bet icon and no
+                       ),
+                     Text(
+                       '+44 133 456 777',
+                       style:  TextStyle(
+                         color: Colors.grey,
+                         fontFamily: 'Source Sans Pro',
+                         fontSize:  20.0,
+                       ),
+
+                         )
+                       ],
+                         ),
+                   //  ),
+
+                      ),
+                  //Container(
+
+
+
+                   Card(
+                       color: Colors.white,
+                    // padding: EdgeInsets.all(10.0),
+                      margin: EdgeInsets.symmetric(vertical: 15.0,horizontal: 28.0),
+
+             child: ListTile(
+                leading: Icon(
+                   Icons.email,
+                    color: Colors.teal,
+                  ) ,
+               title: Text   (
+                    'flutter@email.com',
+                       style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.black26,
+                      fontFamily: 'Source Sans Pro'  ),
+                         ),
+                         ))
+                ],
+             )),
+        ),
+        );
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//      home: MyHomePage(title: 'Flutter MODEL Page'),
+//                  )                                        
+//    );          ],                                         
+//  }           ),                                           
