@@ -1,0 +1,92 @@
+import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+
+
+void main() => runApp(AnimatedTextApp());
+
+
+class AnimatedTextApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter Demo App',
+      home: AnimatedTextWidget(),
+    );
+  }
+}
+
+class AnimatedTextWidget extends StatefulWidget{
+
+  AnimatedTextWidget({Key key}) : super (key: key);
+  @override
+  _AnimatedTextWidgetState createState() => _AnimatedTextWidgetState();
+
+
+}
+
+ class _AnimatedTextWidgetState extends State<AnimatedTextWidget>{
+@override
+void initState() {
+  super.initState();
+}
+
+@override
+   Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(title: Text("Animated Text"),backgroundColor: Colors.amberAccent),
+        body: Container(
+
+          child :Column(
+              children: <Widget>[
+                Row(
+          children: <Widget>[
+                   Spacer(),
+                   Text("Learn🥯🥖"),
+                   Spacer(),
+
+                    SizedBox(  height: 30),
+                     RotateAnimatedTextKit(
+                       text:["Flutter","IOS","Swift","Kotlin","Angular","Java"] ,
+                       textStyle: TextStyle(fontSize: 30.0,fontStyle: FontStyle.normal,color: Colors.pink),
+                      ),
+                    ],
+                 ),
+                FadeAnimatedTextKit(
+                  text: ["Web🧶","❦Android Mobile🎧","♾Iphone Mobile☎︎","Web🥫"],
+                  textStyle: TextStyle(fontSize: 30.0,fontStyle: FontStyle.normal,color: Colors.lightGreen),
+                ),
+                SizedBox(height: 70),
+                ScaleAnimatedTextKit(
+                  text: ["Banana🍌🍌","Cheery🍒🍒","Mango🥭🥭","Oranges🍊🍊","Chiku🥝🥝"],
+                  textStyle: TextStyle(fontSize: 30.0,fontStyle: FontStyle.normal,color: Colors.black),
+                ),
+
+                SizedBox(
+                  height: 60
+                ),
+                TyperAnimatedTextKit(
+
+                  text: ["_xoxoxo_!!","_ooooppp_!!","_ababab_!!","_ffffff_!!","_ioioioio_!!"],
+                  textStyle: TextStyle(fontSize: 30.0,fontStyle: FontStyle.normal,color: Colors.black),
+                ),
+                SizedBox(
+                  height: 30
+                ),
+                TypewriterAnimatedTextKit(
+                  text: ["I slept and I dreamed that life is all joy. I woke and I saw that life is all service. I served and I saw that service is joy.","A day wasted on others is not wasted on one’s self."],
+                  textStyle: TextStyle(fontSize: 30.0,fontStyle: FontStyle.normal,color: Colors.black),
+
+                ),
+              ],
+
+             ),
+
+           ),
+         );
+
+    }
+  }
+
+
+
